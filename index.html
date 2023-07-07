@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="indexstyle.css">
+
+    <style>
+        #loading-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+
+        .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            border-top-color: #333;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class='box'>
+        <div class='box-form'>
+            <div class='box-login-tab'></div>
+            <div class='box-login-title'>
+                <div class='i i-login'></div>
+                <h2>LOGIN</h2>
+            </div>
+            <div class='box-login'>
+                <div class='fieldset-body' id='login_form'>
+                    <button onclick="openLoginInfo();" class='b b-form i i-more' title='Info'></button>
+                    <form action="main.html" method="post" onsubmit="return showLoading(event);">
+                        <p class='field'>
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+                        </p>
+                        <p class='field'>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                        </p>
+                        <input type='submit' id='do_login' value='LOG IN' title='Log In' />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='box-info'>
+            <p>
+                <button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button>
+                <h3>Need Help?</h3>
+            </p>
+            <div class='line-wh'></div>
+            <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
+            <button onclick="" class='b-support' title='Contact Support'> Contact Support</button>
+            <div class='line-wh'></div>
+            <button onclick="" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>
+        </div>
+    </div>
+
+    <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        function showLoading(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Show loading screen
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'block';
+
+            // Simulate login process
+            setTimeout(() => {
+                // Redirect to main.html after login process is complete
+                window.location.href = 'main.html';
+            }, 2000); // Simulating 2 seconds of login process, replace with your actual login logic
+
+            return false; // Return false to prevent form submission
+        }
+    </script>
+</body>
+</html>

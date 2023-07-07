@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="https://kit.fontawesome.com/1a2cc7c856.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<style>
+
+
+
+
+
+
+    .soften-edges {
+        background-color: rgba(241, 241, 241, 0.5);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+#monsters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#monsters table {
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+#monsters img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+#monsters imgoverlay {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#imgoverlay img {
+  max-width: 300px;
+  max-height: 300px;
+  border: 3px solid black;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	transition: background-image 0.5s; /* Added transition for background image */
+	background-size: cover; /* Cover the entire body with the background image */
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: fixed;
+}
+/* Added CSS to blur only the body background */
+.blur {
+	backdrop-filter: blur(2px); /* Apply the blur effect to the body background */
+	-webkit-backdrop-filter: blur(2px); /* For Safari */
+}
+
+</style>
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Port<span>fo</span>lio</a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#teams" class="menu-btn">Highlights</a></li>
+				<li><a href="#monsters" class="menu-btn">Monsters</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+				<li><a href="index.html" class="menu-btn">Log Out</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section start -->
+	
+    <section class="home" id="home">
+		
+        <div class="max-width">
+            <div class="home-content">
+			
+			
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Tristan Eustaquio</div>
+                <div class="text-3">And I'm a <span class="typing"></span></div>
+                <a href="#">Log out!?</a>
+			
+            </div>
+        </div>
+		
+    </section>
+
+    <!-- about section start -->
+    <section class="about" id="about">
+	<div class="soften-edges">
+        <div class="max-width">
+            <h2 class="title">About me</h2>
+		
+            <div class="about-content">
+                <div class="column left">	
+				
+                    <img src="images/profile-1.jpeg" alt="">
+                
+				</div>
+                <div class="column right">
+                    <div class="text">I'm Tristan and I'm a <span class="typing-2"></span></div>
+					<div class="soften-edges">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum 
+					eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus.
+					Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, 
+					odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem
+					consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum 
+					repudiandae harum non.</p>
+					</div>
+                    <a href="resume.html">Read More</a>
+					
+                </div>
+            </div>
+		</div>
+        </div>
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">I can</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+						<i class="fas fa-paint-brush"></i>
+                        <div class="text">Crochet</div>
+                        <p>I CAN CROCHET AND STILL LEARNING!</p>
+                    </div>
+                </div>
+
+				
+				<div class="card">
+                    <div class="box">
+						<i class="fas fa-wheelchair"></i>
+                        <div class="text">Crazy???</div>
+                        <p>They put me in a room.
+A rubber room.
+A rubber room with rats.
+They put me in a rubber room with rubber rats.
+Rubber rats? I hate rubber rats.
+They make me crazy.</p>
+                    </div>
+                </div>
+				
+								<div class="card">
+                    <div class="box">
+						<i class="fas fa-chart-line"></i>
+                        <div class="text">TRIPPINGS???</div>
+                        <p>Ang ambag ko sa PILIPINAS ay ang aking humor</p>
+                    </div>
+                </div>
+				
+
+				
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+	<div class="soften-edges">
+        <div class="max-width">
+            <h2 class="title">My skills</h2>
+            <div class="skills-content">
+                <div class="column left">
+				
+                    <div class="text">Me and Powers</div>
+					
+                    <p>I have many skills, I have learned but no mastery or specialization. I can dance , I can sing (terribly), I used to play the guitar,
+					I think I'm a okay swimmer and "Magaling ako maligaw pero alam ko ang daan pa balik sa kaniya."</p>
+					
+                   <a href="#" id="playButton"><i class="fas fa-play"></i></a>
+					<audio id="audioPlayer">
+    <source src="./pics/lab.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+					<!--
+                    <div class="bars">
+                        <div class="info">
+                            <span>PHP</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="line php"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+	
+<!-- teams section start -->
+<section class="teams" id="teams">
+    <div class="max-width">
+        <h2 class="title">Highlights</h2>
+        <div class="carousel owl-carousel">
+            <div class="card">
+                <div class="box">
+                    
+					<img src="images/profile-1.jpeg" alt="" data-src="images/profile-1.jpeg">
+                    <div class="text">Team 1</div>
+                    <p>Team 1 Description</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="images/profile-2.jpg" alt="">
+                    <div class="text">Team 2</div>
+                    <p>Team 2 Description</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="images/car3.jpg" alt="">
+                    <div class="text">Team 3</div>
+                    <p>Team 3 Description</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="images/car4.jpg" alt="">
+                    <div class="text">Team 4</div>
+                    <p>Team 4 Description</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="images/car5.jpg" alt="">
+                    <div class="text">Team 5</div>
+                    <p>Team 5 Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Highlights Popup -->
+<div class="highlights-popup">
+    <div class="close-btn">&times;</div>
+    <div class="popup-content">
+        <img src="" alt="" class="popup-image">
+    </div>
+</div>
+	
+	
+
+
+	<!-- TeamsII -->
+	<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('#monsters img');
+  const overlay = document.getElementById('imgoverlay');
+  //const body = document.querySelector('#monster-section body');
+  images.forEach((image) => {
+    image.addEventListener('click', (event) => {
+      const name = image.getAttribute('data-name');
+      const age = image.getAttribute('data-age');
+      const location = image.getAttribute('data-location');
+      const imagePath = image.getAttribute('data-img');
+
+      alert(`Name: ${name}\nEntity: ${age}\nTraits: ${location}`);
+
+      document.body.style.backgroundImage = `url(${imagePath})`;
+
+      if (imagePath.includes('elephantbg.jpg') ||
+	  imagePath.includes('crashbg.jpg') || 
+	  imagePath.includes('spiderbg.png') ||
+	  imagePath.includes('octobg.png') || 
+	  imagePath.includes('maskbg.jpg') || 
+	  imagePath.includes('bearbg.jpg') || 
+	  imagePath.includes('goarbg.jpg') || 
+	  imagePath.includes('monkeybg.png') || 
+	  imagePath.includes('sludgebg.jpg') || 
+	  imagePath.includes('rhbg.jpg')) {
+        document.body.classList.add('blur');
+      } else {
+        document.body.classList.remove('blur');
+      }
+    });
+
+    image.addEventListener('mouseenter', (event) => {
+      overlay.innerHTML = '';
+      const clonedImage = image.cloneNode(true);
+      clonedImage.style.width = '100%';
+      clonedImage.style.height = '100%';
+      overlay.appendChild(clonedImage);
+      overlay.style.display = 'block';
+    });
+  });
+
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  document.body.style.backgroundImage = 'none';
+  document.body.classList.remove('blur');
+});
+});
+
+	</script>
+	<section class="monsters" id="monsters">
+	<div class="max-width">
+	<div class="soften-edges">
+	<h2 class="title">My Little Monsters</h2>
+	
+		
+			
+				<div class="tcontainer">
+    <table>
+        <caption><b>BHOXZ</b></caption>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td><img src="./pics/crash(1).png" border="2" data-name="Crash" data-age="YOU" data-location="Bandicoot" data-img="./pics/crashbg.jpg"></td>
+            <td><img src="./pics/elephant.png" border="2" data-name="Shellepant" data-age="Large" data-location="Elephant/Crab" data-img="./pics/elephantbg.jpg"></td>
+            <td><img src="./pics/spider.png" border="2" data-name="Arachnina" data-age="BOSS" data-location="Spider/Robot Mech" data-img="./pics/spiderbg.png"></td>
+            <td><img src="./pics/octo.png" border="2" data-name="Yucktopus" data-age="BOSS" data-location="Yak/Octopus/Duck/Bagpipes" data-img="./pics/octobg.png"></td>
+            <td><img src="./pics/wood.jpg" border="2" data-name="Uka Uka" data-age="BOSS" data-location="Uka Uka/Wood/Mojo" data-img="./pics/maskbg.jpg"></td>
+        </tr>
+    </table>
+    <table>
+        <caption><b>BRO</b></caption>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td><img src="./pics/bear.png" border="2" data-name="Ratcicle" data-age="Small" data-location="Rat/Ice" data-img="./pics/bearbg.jpg"></td>
+            <td><img src="./pics/goar.png" border="2" data-name="Goar" data-age="Medium" data-location="Bear/Boar" data-img="./pics/goarbg.jpg"></td>
+            <td><img src="./pics/monkey.png" border="2" data-name="Scorporilla" data-age="Large" data-location="Gorilla/Scorpion" data-img="./pics/monkeybg.png"></td>
+            <td><img src="./pics/sludge.png" border="2" data-name="Sludge" data-age="Small" data-location="Chameleon/Slug/Pig" data-img="./pics/sludgebg.jpg"></td>
+            <td><img src="./pics/rh.png" border="2" data-name="RhinoRoller" data-age="Medium" data-location="Rhino/Armadillo/Lion" data-img="./pics/rhbg.jpg"></td>
+        </tr>
+
+    </table>
+	</div>
+</div>
+
+<!-- Added image overlay container -->
+<div class="d-flex justify-content-center">
+    <div id="imgoverlay"></div>
+</div>
+				
+	</div>
+	</section>
+
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+	<div class="soften-edges">
+        <div class="max-width">
+		
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Ring me (WAG!)</div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Boriz</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">SECRET "AREA 51" Classification</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">Tristan.is.serious@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form action="#">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+		</div>
+        </div>
+    </section>
+
+
+    <!-- footer section start -->
+    <footer>
+	<span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.teams .card');
+        const highlightsPopup = document.querySelector('.highlights-popup');
+        const closeBtn = highlightsPopup.querySelector('.close-btn');
+        const popupImage = highlightsPopup.querySelector('.popup-image');
+
+        // Add click event listener to the cards
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const imageSrc = card.querySelector('img').getAttribute('data-src');
+
+                popupImage.src = imageSrc;
+                highlightsPopup.classList.add('show');
+            });
+        });
+
+        // Close the popup when the close button is clicked
+        closeBtn.addEventListener('click', () => {
+            highlightsPopup.classList.remove('show');
+        });
+    });
+</script>
+	
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+        let isPlaying = false;
+
+        playButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default scroll behavior
+            if (isPlaying) {
+                audioPlayer.pause();
+                audioPlayer.currentTime = 0;
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                audioPlayer.play();
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+    });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

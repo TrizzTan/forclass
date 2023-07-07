@@ -1,0 +1,65 @@
+#monster-section body {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+	background-color: #e6e6e6;
+	background-size: 4%;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+#monster-section .tcontainer {
+	display: flex;
+	margin-top: 20px; /* Add margin to create space between the table and the top */
+}
+
+#monster-section img {
+	height: 100px;
+	width: 100px;
+}
+
+#monster-section table {
+	margin-right: 20px;
+	align-self: flex-start; /* Align the table at the top */
+}
+
+/* Added CSS for image display */
+#monster-section #imgoverlay {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+
+#monster-section #imgoverlay img {
+	max-width: 300px;
+	max-height: 300px;
+	border: 3px solid black;
+	cursor: pointer; /* Added cursor style */
+}
+
+#monster-section html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#monster-section body {
+	display: flex;
+	flex-direction: column;
+	transition: background-image 0.5s; /* Added transition for background image */
+	background-size: cover; /* Cover the entire body with the background image */
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Added CSS to blur only the body background */
+#monster-section .blur {
+	backdrop-filter: blur(2px); /* Apply the blur effect to the body background */
+	-webkit-backdrop-filter: blur(2px); /* For Safari */
+}
