@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Student", "Lover", "Blogger", "Coder", "Freelancer"],
+        strings: ["Student", "h... Miss ko na siya", "kulang sa halik", "Very Sabog", "kinda deranged."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
